@@ -5,6 +5,7 @@ import backgroundImage from '../../assets/background/background.png'
 import redbox from '../../assets/icon/redbox.png'
 import { css } from '@emotion/react';
 import { Link } from 'react-router-dom'
+import Header from '../../components/Layout/Header'
 
 
 const randomRange = (min, max) => {
@@ -26,46 +27,31 @@ const PostBg = styled.div`
     
 `;
 
-const generateRandomStyles = () => {
-const randomX = Math.random() * 100;
-const randomOffset = randomRange(-100, 100);
-const randomXEnd = randomX + randomOffset;
-const randomXEndYoyo = randomX + randomOffset / 2;
-const randomYoyoTime = randomRange(30000, 80000) / 100000;
-const randomYoyoY = randomYoyoTime * 100;
-const randomScale = Math.random();
-const fallDuration = randomRange(10, 30);
-return {
-    randomX,
-    randomXEnd,
-    randomXEndYoyo,
-    randomYoyoTime,
-    randomYoyoY,
-    randomScale,
-    fallDuration,
-};
-};
+
 
 const StyledParagraph1 = styled.p`
     font-weight: 900;
     font-size: 48px;
     position:fixed;
-    color: white;
+    color: black;
 	z-index:1;
 	left:50%;
 		transform:translateX(-50%);
-		bottom:75%;
+		bottom:65%;
         text-align: center;
     
 `;
 const StyledParagraph2 = styled.p`
-    white-space: nowrap;
-    font-weight: 700;
-    font-size: 16px;
-    position:fixed;
-    color: white;
-	bottom:  ;
-	z-index:1;
+font-weight: 900;
+font-size: 12px;
+position:fixed;
+color: black;
+z-index:1;
+left:50%;
+    transform:translateX(-50%);
+    bottom:68%;
+    text-align: center;
+
 	
     @font-face {
         font-family: 'Noto Sans KR';
@@ -110,10 +96,6 @@ const StyledParagraph2 = styled.p`
         src: url(./font/NotoSansKR-Black.woff) format('woff'),
             url(./font/NotoSansKR-Black.otf) format('opentype');
     }
-		left:50%;
-		transform:translateX(-50%);
-		bottom:70%;
-        text-align: center;
 `;
 const StyledParagraph3 = styled.p`
     font-weight: 900;
@@ -139,47 +121,8 @@ const StyledParagraph4 = styled.p`
 		bottom:5%;
         text-align: center;
 `;
-const generateSnowflakes = () => {
-const snowflakes = [];
 
-for (let i = 1; i <= 200; i++) {
-    const styles = generateRandomStyles();
 
-    snowflakes.push({
-    id: i,
-    styles,
-    });
-}
-
-return snowflakes;
-};
-
-const Snow = styled.div`
-position: fixed;
-width: 10px;
-height: 10px;
-background: white;  // Change the background color to black
-pointer-events: none;
-border-radius: 50%;
-
-${({ id, styles }) => `
-    &:nth-child(${id}) {
-    opacity: ${Math.random()};
-    transform: translate(${styles.randomX}vw, -10px) scale(${styles.randomScale});
-    animation: fall-${id} ${styles.fallDuration}s -${Math.random() * 30}s linear infinite;
-    }
-
-    @keyframes fall-${id} {
-    ${styles.randomYoyoTime * 100}% {
-        transform: translate(${styles.randomXEnd}vw, ${styles.randomYoyoY}vh) scale(${styles.randomScale});
-    }
-    
-    to {
-        transform: translate(${styles.randomXEndYoyo}vw, 100vh) scale(${styles.randomScale});
-    }
-    }
-`}
-`;
 
 const StyledLink = styled(Link)`
 position: absolute;
@@ -208,17 +151,11 @@ const BoxImg = styled.div`
 
 
 const Hello = () => {
-        const snowflakes = generateSnowflakes();
-
         
 
     return (
     <>
-        {snowflakes.map((snowflake) => (
-        <Snow key={snowflake.id} id={snowflake.id} styles={snowflake.styles} />
-        ))}
-        <StyledLink to="/choose">
-        <PostBg>
+        <Header/>
         <StyledParagraph1>BookBride</StyledParagraph1>
         <StyledParagraph2>나의 끝이, 누군가의 시작이 될 수 있게</StyledParagraph2>
         <StyledParagraph3>
@@ -230,8 +167,6 @@ const Hello = () => {
         <BoxImg>
             <img src={redbox} />
         </BoxImg>
-        </PostBg>
-        </StyledLink>
 
     </>
     );

@@ -5,6 +5,10 @@ import backgroundImage from '../../assets/background/background.png'
 import redbox from '../../assets/icon/redbox.png'
 import { css } from '@emotion/react';
 import { Link } from 'react-router-dom'
+import Header from '../../components/Layout/Header'
+import PostBtnMydonate from '../../components/postbtnMydonate'
+import PostBtnMypage from '../../components/postbtnMypage'
+
 
 
 const randomRange = (min, max) => {
@@ -116,15 +120,15 @@ const StyledParagraph2 = styled.p`
         text-align: center;
 `;
 const StyledParagraph3 = styled.p`
-    font-weight: 900;
-    font-size: 12px;
+    font-weight: 700;
+    font-size: 16px;
     position:fixed;
     color: white;
 	bottom:0;
 	z-index:1;
 		left:50%;
 		transform:translateX(-50%);
-		bottom:50%;
+		bottom:66%;
         text-align: center;
 `;
 const StyledParagraph4 = styled.p`
@@ -217,21 +221,23 @@ const Hello = () => {
         {snowflakes.map((snowflake) => (
         <Snow key={snowflake.id} id={snowflake.id} styles={snowflake.styles} />
         ))}
-        <StyledLink to="/choose">
+        <Header/>
+
         <PostBg>
-        <StyledParagraph1>BookBride</StyledParagraph1>
-        <StyledParagraph2>나의 끝이, 누군가의 시작이 될 수 있게</StyledParagraph2>
+        <StyledParagraph1>등록 완료!</StyledParagraph1>
         <StyledParagraph3>
-            화면을 클릭하여 아이들의
+            복지관과 매칭이 완료되면
             <br />
-            새 출발을 함께 해 주세요
+            등록하신 이메일로
+            <br />
+            관련 정보가 발송됩니다.
         </StyledParagraph3>
-        <StyledParagraph4>화면을 클릭해주세요</StyledParagraph4>
+        <PostBtnMypage  value='안녕?' type='button' to='/check'/>
+        <PostBtnMydonate  value='참고서 기증하기' type='button' to='/check'/>
         <BoxImg>
             <img src={redbox} />
         </BoxImg>
         </PostBg>
-        </StyledLink>
 
     </>
     );

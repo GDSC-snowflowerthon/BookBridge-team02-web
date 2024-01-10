@@ -5,6 +5,7 @@ export const common = {
     black:'#000',
     pointRed: '#D82847',
     postBg: '#F0F4F8',
+    blue: '#5297FF',
     postWriteBoxBG : '#DEE8F2',
     postWriteBoxTextColor: '#7188A1',
     postWriteTextColor: '#353535',
