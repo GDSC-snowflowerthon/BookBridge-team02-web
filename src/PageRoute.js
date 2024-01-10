@@ -11,10 +11,9 @@ import Process3 from './pages/donate/process3.js'
 import Process4 from './pages/donate/process4.js'
 import Process5 from './pages/donate/process5.js'
 import Process6 from './pages/donate/process6.js'
-
 import Choose from './pages/main/choose.js'
 import Gui from './pages/main/gui.js'
-
+import Check from './pages/main/check.js'
 
 
 const PageRoute = () =>{
@@ -22,7 +21,8 @@ const { id } = useParams();
 return (
     <Routes>
     <Route path='/' element={<Gui />}></Route>
-    <Route path='/map' element={<Choose />}></Route>
+    <Route path='/choose' element={<Choose />}></Route>
+    <Route path='/check' element={<Check />}></Route>
     <Route path='/donate/userlogin' element={<Userlogin />}></Route>
     <Route path='/donate/nickname' element={<Nickname />}></Route>
     <Route path='/donate/process1' element={<Process1 />}></Route>
