@@ -3,6 +3,9 @@ import axios from "axios";
 import Header from "../../components/Layout/Header";
 import InputField from "../../components/InputField";
 import backgroundImage from "../../assets/background/background.png";
+import { useNavigate } from "react-router-dom";
+
+import "../../styles/agencysignup.css";
 
 const AgencySignUp = () => {
   const [regNum, setRegNum] = useState("");
@@ -11,6 +14,7 @@ const AgencySignUp = () => {
   const [password, setPassword] = useState("");
   const [checkPassword, setCheckPassword] = useState("");
   const [name, setName] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -37,6 +41,7 @@ const AgencySignUp = () => {
     try {
       const response = await axios.post("/signup", formData);
       console.log(response.data);
+      navigate("/reciever/booklist");
     } catch (error) {
       console.error("회원가입 오류:", error);
     }
@@ -45,7 +50,7 @@ const AgencySignUp = () => {
   return (
     <div className="agencysignup-container">
       <Header></Header>
-      <div>
+      <div className="agencysignup-header">
         <div>복지관 회원가입</div>
         <div>인증을 통해 참고서를 지원받으세요</div>
       </div>

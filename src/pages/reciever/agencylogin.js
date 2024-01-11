@@ -3,6 +3,7 @@ import { Route } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Header from "../../components/Layout/Header";
 import "../../styles/agencylogin.css";
 
 const AgencyLogin = () => {
@@ -24,6 +25,7 @@ const AgencyLogin = () => {
 
   return (
     <div className="login-container">
+      <Header></Header>
       <div className="header-login">
         <h1 className="title">BookBridge</h1>
         <p className="subtitle">나의 시작이 될 수 있게</p>
