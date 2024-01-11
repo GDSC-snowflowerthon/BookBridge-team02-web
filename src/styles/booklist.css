@@ -1,0 +1,26 @@
+.header-list {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: black;
+  font-size: 30px;
+  font-family: "Noto Sans KR";
+  font-weight: 700;
+
+  padding-bottom: 20px;
+}
+
+.select-curriculum,
+.select-subject {
+  padding: 5px;
+  font-weight: 900;
+  font-size: large;
+}
+
+.select-subject {
+  margin-left: 40px;
+}
+
+.booklist {
+  padding-top: 20px;
+}

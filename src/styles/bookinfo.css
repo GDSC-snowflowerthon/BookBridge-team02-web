@@ -1,0 +1,56 @@
+.header-info {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: black;
+  font-size: 25px;
+  font-family: "Noto Sans KR";
+  font-weight: 700;
+  word-wrap: break-word;
+}
+
+.bookImg {
+  width: 200px;
+  height: 280px;
+}
+
+.bookTitle {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  color: black;
+  font-size: 24px;
+  font-family: "Noto Sans KR";
+  font-weight: 900;
+  padding: 15px;
+  border-bottom: solid 1px;
+}
+
+.bookTable {
+  width: 100%;
+  font-size: 20px;
+}
+
+.bookTable td {
+  text-align: left;
+  font-weight: 800;
+  padding: 10px;
+}
+
+.bookTable td:nth-of-type(2) {
+  font-weight: 400;
+}
+
+.applyButton {
+  width: 80%;
+  height: 56px;
+  background: #5297ff;
+  border-radius: 20px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  margin-top: 30px;
+}

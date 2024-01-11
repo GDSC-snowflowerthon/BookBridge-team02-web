@@ -11,6 +11,11 @@ import Process3 from "./pages/donate/process3.js";
 import Process4 from "./pages/donate/process4.js";
 import Process5 from "./pages/donate/process5.js";
 import Process6 from "./pages/donate/process6.js";
+import AgencyLogin from "./pages/reciever/agencylogin.js";
+import AgencySignUp from "./pages/reciever/agencysignup.js";
+import BookList from "./pages/reciever/booklist.js";
+import BookInfo from "./pages/reciever/bookinfo.js";
+import Finish from "./pages/reciever/finish.js";
 
 import Choose from "./pages/main/choose.js";
 import Gui from "./pages/main/gui.js";
@@ -20,7 +25,7 @@ const PageRoute = () => {
   return (
     <Routes>
       <Route path="/" element={<Gui />}></Route>
-      {/*<Route path="/map" element={<Choose />}></Route>
+      <Route path="/map" element={<Choose />}></Route>
       <Route path="/donate/userlogin" element={<Userlogin />}></Route>
       <Route path="/donate/nickname" element={<Nickname />}></Route>
       <Route path="/donate/process1" element={<Process1 />}></Route>
@@ -31,7 +36,11 @@ const PageRoute = () => {
       <Route path="/donate/process6" element={<Process6 />}></Route>
       <Route path="/donate/mypage" element={<Mypage />}></Route>
       <Route path="/donate/mydonation" element={<Mydonation />}></Route>
-  */}
+      <Route path="/reciever/agencylogin" element={<AgencyLogin />}></Route>
+      <Route path="/reciever/agencysignup" element={<AgencySignUp />}></Route>
+      <Route path="/reciever/booklist" element={<BookList />}></Route>
+      <Route path="/reciever/bookinfo" element={<BookInfo />}></Route>
+      <Route path="/reciever/finish" element={<Finish />}></Route>
     </Routes>
   );
 };
