@@ -17,7 +17,7 @@ const StyledLink = styled(Link)`
     align-items: center;
     position: fixed;
     width: 50%;
-    right: 180px; /* 변경된 부분 */
+    right: 170px; /* 변경된 부분 */
     padding: 0 ${common.padding};
     bottom: 60%;
     text-decoration: none; /* 텍스트에 밑줄 제거 */

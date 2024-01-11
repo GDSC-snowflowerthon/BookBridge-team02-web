@@ -16,14 +16,25 @@ const StyledLink = styled(Link)`
     justify-content: center;
     align-items: center;
     position: fixed;
-    width: 60%;
-    right: -20px; /* 변경된 부분 */
+    width: 50%;
+    right: -10px; /* 변경된 부분 */
     padding: 0 ${common.padding};
     bottom: 60%;
     text-decoration: none; /* 텍스트에 밑줄 제거 */
 	z-index:2;
 `;
-
+// const StyledLink = styled(Link)`
+//     display: block;
+//     justify-content: center;
+//     align-items: center;
+//     position: fixed;
+//     width: 50%;
+//     right: 180px; /* 변경된 부분 */
+//     padding: 0 ${common.padding};
+//     bottom: 60%;
+//     text-decoration: none; /* 텍스트에 밑줄 제거 */
+// 	z-index:2;
+// `;
 
 
 const Button = styled.button`

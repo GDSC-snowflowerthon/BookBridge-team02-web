@@ -26,7 +26,7 @@ const PostBg = styled.div`
     align-items: center;
     cursor: pointer;
     position: relative;
-    z-index: -1;
+    z-index: 1;
     
 `;
 
@@ -218,12 +218,12 @@ const Hello = () => {
 
     return (
     <>
+        <PostBg>
         {snowflakes.map((snowflake) => (
         <Snow key={snowflake.id} id={snowflake.id} styles={snowflake.styles} />
         ))}
         <Header/>
 
-        <PostBg>
         <StyledParagraph1>등록 완료!</StyledParagraph1>
         <StyledParagraph3>
             복지관과 매칭이 완료되면
@@ -232,8 +232,8 @@ const Hello = () => {
             <br />
             관련 정보가 발송됩니다.
         </StyledParagraph3>
-        <PostBtnMypage  value='안녕?' type='button' to='/check'/>
-        <PostBtnMydonate  value='참고서 기증하기' type='button' to='/check'/>
+        <PostBtnMypage  value='마이페이지' type='button' to='/donate/mypage'/>
+        <PostBtnMydonate  value='기부현황보기' type='button' to='/donate/mydonation'/>
         <BoxImg>
             <img src={redbox} />
         </BoxImg>
