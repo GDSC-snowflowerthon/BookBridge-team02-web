@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import axios from "axios";
 import queryString from "query-string";
 import { Link } from "react-router-dom";
+import Header from "../../components/Layout/Header";
 import "../../styles/bookinfo.css";
 /*
 {
@@ -32,7 +33,8 @@ const BookInfo = () => {
 
   //book.____
   return (
-    <div>
+    <div className="bookinfo-container">
+      <Header></Header>
       <div className="header-info">정보 세부보기</div>
       <img className="bookImg" src="https://via.placeholder.com/189x231" />
       <div>

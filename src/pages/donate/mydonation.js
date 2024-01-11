@@ -220,7 +220,7 @@ const BoxImg = styled.div`
 
 //const ListItem = ({pageTypeNormal, pageTypeDetail, name, school,subject,date,matching, imgSrc}) =>{
 
-const Mydonation = () => {
+const Hello = () => {
   const arrs = [
     {
       name: "쎈 연산 5",
@@ -275,4 +275,4 @@ const Mydonation = () => {
   );
 };
 
-export default Mydonation;
+export default Hello;

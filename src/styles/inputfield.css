@@ -1,0 +1,17 @@
+.inputfield-container {
+}
+
+.input-label {
+  color: black;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.signup-input {
+  width: 90%;
+  border-radius: 20px;
+  background: #d9d9d9;
+}

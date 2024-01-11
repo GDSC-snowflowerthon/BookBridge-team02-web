@@ -6,10 +6,13 @@
   font-size: 30px;
   font-family: "Noto Sans KR";
   font-weight: 700;
-
+  padding-top: 20px;
   padding-bottom: 20px;
 }
-
+.select {
+  display: flex;
+  justify-content: center;
+}
 .select-curriculum,
 .select-subject {
   padding: 5px;
