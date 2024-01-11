@@ -1,14 +1,13 @@
 import PageRoute from "./PageRoute";
 import { BrowserRouter as Router } from "react-router-dom";
-import React from 'react'
-import { Global } from '@emotion/react'
-import { BrowserRouter } from 'react-router-dom'
-import PageRoute from './PageRoute'
+import React from "react";
+import { Global } from "@emotion/react";
+import { BrowserRouter } from "react-router-dom";
 
-const App = () =>{
+const App = () => {
   return (
     <BrowserRouter>
-      <PageRoute/>
+      <PageRoute />
     </BrowserRouter>
   );
 };
