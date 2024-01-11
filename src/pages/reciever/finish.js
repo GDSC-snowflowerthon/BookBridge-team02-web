@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import "../../styles/finish.css";
-import backgroundImg from "../../assets/background.png";
 import giftBoxImg from "../../assets/giftbox_blue.png";
 
 const Finish = () => {
