@@ -23,7 +23,6 @@ import Login from "./pages/main/userlogin.js";
 import Usersingup from "./pages/main/usersignup.js";
 
 const PageRoute = () => {
-  const {} = useParams();
   return (
     <Routes>
       <Route path="/" element={<Gui />}></Route>

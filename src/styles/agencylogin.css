@@ -2,12 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+
   height: 100vh;
   background-color: #fff;
 }
 
 .header-login {
+  margin-top: 100px;
   text-align: center;
   padding-bottom: 40px;
 }
@@ -36,7 +37,7 @@
 }
 
 .input-field {
-  width: 90%;
+  width: 95%;
   height: 50px;
   padding: 10px;
   margin-bottom: 10px;

@@ -51,6 +51,10 @@ const BookInfo = () => {
                 <td>aaa</td>
               </tr>
               <tr>
+                <td>필기 도구</td>
+                <td>aaa</td>
+              </tr>
+              <tr>
                 <td>필기 상태</td>
                 <td>aaa</td>
               </tr>
