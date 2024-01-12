@@ -3,9 +3,8 @@ import { Routes, Route, useParams } from "react-router-dom";
 import Dongui from "./pages/donate/donategui.js";
 import Mydonation from "./pages/donate/mydonation.js";
 import Mypage from "./pages/donate/mypage.js";
-import Nickname from "./pages/donate/nickname.js";
+// import Nickname from "./pages/donate/nickname.js";
 import Process1 from "./pages/donate/process1.js";
-import Process2 from "./pages/donate/process2.js";
 import Process3 from "./pages/donate/process3.js";
 import Process4 from "./pages/donate/process4.js";
 import Process5 from "./pages/donate/process5.js";
@@ -14,7 +13,6 @@ import Done from "./pages/donate/done.js";
 import AgencyLogin from "./pages/reciever/agencylogin.js";
 import AgencySignUp from "./pages/reciever/agencysignup.js";
 import BookList from "./pages/reciever/booklist.js";
-import BookInfo from "./pages/reciever/bookinfo.js";
 import Finish from "./pages/reciever/finish.js";
 import SearchBooks from "./pages/reciever/searchbooks.js";
 import Choose from "./pages/main/choose.js";
@@ -23,6 +21,9 @@ import Check from "./pages/main/check.js";
 import Login from "./pages/main/userlogin.js";
 import Usersingup from "./pages/main/usersignup.js";
 import SearchBookList from "./pages/reciever/searchbooklist.js";
+import BookInfo from "./pages/reciever/bookinfo.jsx";
+import Process2 from "./pages/donate/process2.js";
+import Process from "./pages/donate/process/Process.jsx";
 
 const PageRoute = () => {
   return (
@@ -33,7 +34,8 @@ const PageRoute = () => {
       <Route path="/login" element={<Login />}></Route>
       <Route path="/signup" element={<Usersingup />}></Route>
       <Route path="/donate/gui" element={<Dongui />}></Route>
-      <Route path="/donate/nickname" element={<Nickname />}></Route>
+      {/* <Route path="/donate/nickname" element={<Nickname />}></Route> */}
+      <Route path="/donate/process" element={<Process />}></Route>
       <Route path="/donate/process1" element={<Process1 />}></Route>
       <Route path="/donate/process2" element={<Process2 />}></Route>
       <Route path="/donate/process3" element={<Process3 />}></Route>

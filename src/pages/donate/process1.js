@@ -56,25 +56,22 @@ const BoxImg = styled.div`
 		bottom:45%;
 	
 `;
-const Hello = () => {
-
-
-return (
-    <>        
-        <Header />
-        <StyledParagraph1>안녕하세요.</StyledParagraph1>
-        <BoxImg>            
-        <img src={hello}/>
-        </BoxImg>
-        <StyledParagraph2>
-            남경현님
-            <br/>
-            만나서 반갑습니다!
-        </StyledParagraph2>
-        <PostBtngo value='다음으로' type='button' to='/donate/process2'/>
-    </>
-
-);
+const Process1 = () => {
+    return (
+        <>        
+            <Header />
+            <StyledParagraph1>안녕하세요.</StyledParagraph1>
+            <BoxImg>            
+            <img src={hello}/>
+            </BoxImg>
+            <StyledParagraph2>
+                남경현님
+                <br/>
+                만나서 반갑습니다!
+            </StyledParagraph2>
+            <PostBtngo value='다음으로' type='button' to='/donate/process'/>
+        </>
+        );
 };
 
-export default Hello;
+export default Process1;

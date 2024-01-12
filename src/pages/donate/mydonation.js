@@ -68,7 +68,6 @@ const StyledParagraph2 = styled.p`
   font-size: 16px;
   position: fixed;
   color: white;
-  bottom: ;
   z-index: 1;
 
   @font-face {
