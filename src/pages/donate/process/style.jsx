@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const ProcessCotinaer = styled.div`
-    display: flex;
+export const ProcessContainer = styled.div`
+  display: flex;
 `;

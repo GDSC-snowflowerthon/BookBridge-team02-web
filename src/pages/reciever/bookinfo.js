@@ -40,7 +40,7 @@ const BookInfo = () => {
           <table className="bookTable">
             <tbody>
               <tr>
-                <td>학년</td>
+                <td>교과 과정</td>
                 <td>{book.curriculum}</td>
               </tr>
               <tr>
