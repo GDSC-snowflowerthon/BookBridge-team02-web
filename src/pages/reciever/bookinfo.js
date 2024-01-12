@@ -19,10 +19,10 @@ import "../../styles/bookinfo.css";
 */
 const BookInfo = () => {
   const { search } = useLocation();
-  const { id } = queryString.parse(search);
+  const { book_id } = queryString.parse(search);
   const fetchData = async () => {
     try {
-      const response = await axios.get(`/book/${id}`);
+      const response = await axios.get(`/book/${book_id}`);
       const book = response.data;
     } catch (error) {
       console.error("데이터 로딩 중 오류 발생", error);
@@ -31,40 +31,37 @@ const BookInfo = () => {
 
   fetchData();
 
-  //book.____
   return (
     <div className="bookinfo-container">
       <Header></Header>
       <div className="header-info">정보 세부보기</div>
-      <img className="bookImg" src="https://via.placeholder.com/189x231" />
+      <img className="bookImg" alt="bookImg" src={book.outsideImageUrl} />
       <div>
-        <div className="bookTitle">쎈 연산 / 수학</div>
+        <div className="bookTitle">
+          {book.title} / {book.subject}
+        </div>
         <div>
           <table className="bookTable">
             <tbody>
               <tr>
                 <td>학년</td>
-                <td>aaa</td>
+                <td>{book.curriculum}</td>
               </tr>
               <tr>
                 <td>출판사</td>
-                <td>aaa</td>
+                <td>{book.publisher}</td>
               </tr>
               <tr>
                 <td>필기 도구</td>
-                <td>aaa</td>
+                <td>{book.writingToolList.join(" ")}</td>
               </tr>
               <tr>
                 <td>필기 상태</td>
-                <td>aaa</td>
+                <td>{book.writingDegree}</td>
               </tr>
               <tr>
                 <td>보존 상태</td>
-                <td>aaa</td>
-              </tr>
-              <tr>
-                <td>닉네임</td>
-                <td>aaa</td>
+                <td>{book.preservationStatusList.join(" ")}</td>
               </tr>
             </tbody>
           </table>

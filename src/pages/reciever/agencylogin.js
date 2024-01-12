@@ -19,7 +19,7 @@ const AgencyLogin = () => {
       });
       navigate("/reciever/booklist");
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 

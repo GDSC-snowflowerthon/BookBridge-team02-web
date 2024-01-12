@@ -10,18 +10,16 @@ const SearchBookList = () => {
     <div className="booklist-container">
       <Header></Header>
       <div className="header-list">목록</div>
-      {/* <div className="booklist">
-        {books.map((book) => (
-          <BookStatus
-            key={book.id}
-            id={book.id}
-            title={book.title}
-            curriculum={book.curriculum}
-            subject={book.subject}
-            publisher={book.publisher}
-            imageUrl={book.url}
-          />
-        ))} */}
+      {books.map((book) => (
+        <BookStatus
+          id={book.bookId}
+          title={book.title}
+          curriculum={book.curriculum}
+          subject={book.subject}
+          publisher={book.publisher}
+          imageUrl={book.outsideImageUrl}
+        />
+      ))}
       <BookStatus></BookStatus>
       <BookStatus></BookStatus>
       <BookStatus></BookStatus>

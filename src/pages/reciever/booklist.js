@@ -15,9 +15,9 @@ const BookList = () => {
     };
 
     axios
-      .get("", { params }) //주소 넣기
+      .get(`/book?curriculum=${curriculum}&subject=${subject}`) //주소 넣기
       .then((response) => setBooks(response.data))
-      .catch((error) => console.error("Error:", error));
+      .catch((error) => console.error("책 불러오기 실패", error));
   };
 
   useEffect(() => {
@@ -65,13 +65,12 @@ const BookList = () => {
       <div className="booklist">
         {books.map((book) => (
           <BookStatus
-            key={book.id}
-            id={book.id}
+            id={book.bookId}
             title={book.title}
             curriculum={book.curriculum}
             subject={book.subject}
             publisher={book.publisher}
-            imageUrl={book.url}
+            imageUrl={book.outsideImageUrl}
           />
         ))}
         <BookStatus></BookStatus>

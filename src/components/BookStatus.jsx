@@ -30,7 +30,7 @@ const BookStatus = ({
           }}
         >
           <img
-            src="https://s3-alpha-sig.figma.com/img/c54a/1351/4286101ef7df1a35618160721cb591b7?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UCo8nJaSnnWCAi0uB9NeDiwTL2pAoq0rlxap0udoPObSNJCfKBz0H51oXxTtSTWUrWIJeFOpBsWscvlO4uYwgPh5XSfvBA5LEivFI5rZzm1cvnNn2DmYwCwn0q~bzYnDWfp5HkY0mb91bvg0poTg6WoAS1RzWq5e8Htdh3AOCtnr16tHZVDWRPDoGGTH-BZSpstemjYWyfIThQU~M534thUOha5~-TjpqX-8r~IFgpBMdFfV-ArNGFea44Gk7pRm1eTTfZmqdf0rJCaVv7llKG2op87bQ1iT02ygtZBwVZlzv55erjAp7zFz2fGFD2PlGEp6upQxyrjVr8gNDySE~g__"
+            src={imageUrl}
             alt="Book"
             style={{
               width: "84px",
