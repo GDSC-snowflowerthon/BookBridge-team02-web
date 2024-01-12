@@ -5,24 +5,65 @@ import Header from "../../components/Layout/Header";
 import "../../styles/booklist.css";
 
 const BookList = () => {
+  const [allBooks, setAllBooks] = useState([
+    {
+      outsideImageUrl: "/example1.png",
+      title: "쎈",
+      subject: "수학",
+      curriculum: "초등",
+      publisher: "한빛출판사",
+    },
+    {
+      bookId: 9,
+      outsideImageUrl: "/example2.jpg",
+      title: "하이탑",
+      subject: "과학",
+      curriculum: "중등",
+      publisher: "하이탑출판사",
+    },
+    {
+      bookId: 8,
+      outsideImageUrl: "/example3.jpg",
+      title: "국치독",
+      subject: "국어",
+      curriculum: "고등",
+      publisher: "유대종출판사",
+    },
+    {
+      bookId: 7,
+      outsideImageUrl: "/example4.jpg",
+      title: "경선식영단어",
+      subject: "영어",
+      curriculum: "고등",
+      publisher: "한빛출판사",
+    },
+    {
+      bookId: 6,
+      outsideImageUrl: "/example5.jpg",
+      title: "삼국지",
+      subject: "한국사",
+      curriculum: "초등",
+      publisher: "중국출판사",
+    },
+  ]);
   const [books, setBooks] = useState([]);
   const [curriculum, setCurriculum] = useState("모든 교육 과정");
   const [subject, setSubject] = useState("모든 과목");
-  const fetchBooks = () => {
-    const params = {
-      subject: subject,
-      curriculum: curriculum,
-    };
-
-    axios
-      .get(`/book?curriculum=${curriculum}&subject=${subject}`) //주소 넣기
-      .then((response) => setBooks(response.data))
-      .catch((error) => console.error("책 불러오기 실패", error));
-  };
 
   useEffect(() => {
-    fetchBooks();
-  }, [subject, curriculum]);
+    // 전체 책 목록에서 필터링
+    let filteredBooks = allBooks;
+    if (curriculum !== "모든 교육 과정") {
+      filteredBooks = filteredBooks.filter(
+        (book) => book.curriculum === curriculum
+      );
+    }
+    if (subject !== "모든 과목") {
+      filteredBooks = filteredBooks.filter((book) => book.subject === subject);
+    }
+
+    setBooks(filteredBooks);
+  }, [curriculum, subject]); // curriculum과 subject가 바뀔 때마다 실행
 
   const handleCurriculumChange = (event) => {
     setCurriculum(event.target.value);
@@ -70,14 +111,9 @@ const BookList = () => {
             curriculum={book.curriculum}
             subject={book.subject}
             publisher={book.publisher}
-            imageUrl={book.outsideImageUrl}
+            outsideImageUrl={book.outsideImageUrl}
           />
         ))}
-        <BookStatus></BookStatus>
-        <BookStatus></BookStatus>
-        <BookStatus></BookStatus>
-        <BookStatus></BookStatus>
-        <BookStatus></BookStatus>
       </div>
     </div>
   );

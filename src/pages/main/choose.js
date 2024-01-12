@@ -119,7 +119,11 @@ const Hello = () => {
         <BoxImg>
           <img src={donate3d} />
         </BoxImg>
-        <PostBtn value="등록하기" type="button" to="/reciever/agencylogin" />
+        <PostBtn
+          value="참고서 기증받기"
+          type="button"
+          to="/reciever/agencylogin"
+        />
       </PostBg>
     </>
   );

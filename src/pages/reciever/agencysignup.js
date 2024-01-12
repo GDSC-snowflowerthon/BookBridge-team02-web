@@ -29,22 +29,23 @@ const AgencySignUp = () => {
       return;
     }
 
-    const formData = {
-      email: email,
-      login_id: id,
-      password: password,
-      check_password: checkPassword,
-      name: name,
-      registration_number: regNum,
-    };
+    // const formData = {
+    //   email: email,
+    //   login_id: id,
+    //   password: password,
+    //   check_password: checkPassword,
+    //   name: name,
+    //   registration_number: regNum,
+    // };
 
-    try {
-      const response = await axios.post("/signup", formData);
-      console.log(response.data);
-      navigate("/reciever/agencylogin");
-    } catch (error) {
-      console.error("회원가입 오류:", error);
-    }
+    // try {
+    //   const response = await axios.post("/signup", formData);
+    //   console.log(response.data);
+    //   navigate("/reciever/agencylogin");
+    // } catch (error) {
+    //   console.error("회원가입 오류:", error);
+    // }
+    navigate("/reciever/agencylogin");
   };
 
   return (
@@ -63,9 +64,9 @@ const AgencySignUp = () => {
           onChange={(e) => setRegNum(e.target.value)}
         />
         <InputField
-          label="이메일"
+          label="전화번호"
           type="email"
-          placeholder="이메일"
+          placeholder="전화번호"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />

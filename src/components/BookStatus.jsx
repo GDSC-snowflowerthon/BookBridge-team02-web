@@ -1,15 +1,28 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 const BookStatus = ({
   id,
   title,
   curriculum,
   subject,
   publisher,
-  imageUrl,
+  outsideImageUrl,
 }) => {
+  const handleClick = () => {
+    navigate("/reciever/bookinfo", {
+      state: {
+        title: title,
+        curriculum: curriculum,
+        subject: subject,
+        publisher: publisher,
+        outsideImageUrl: outsideImageUrl,
+      },
+    });
+  };
+  const navigate = useNavigate();
   return (
-    <Link
-      to={`/reciever/bookinfo?id=${id}`}
+    <div
+      onClick={handleClick}
       style={{ textDecoration: "none", color: "black" }}
     >
       <div
@@ -30,7 +43,7 @@ const BookStatus = ({
           }}
         >
           <img
-            src={imageUrl}
+            src={outsideImageUrl}
             alt="Book"
             style={{
               width: "84px",
@@ -42,13 +55,19 @@ const BookStatus = ({
 
         {/* Text container */}
         <div style={{ textAlign: "left" }}>
-          <div style={{ marginBottom: "5px" }}>책 제목 : {title}</div>
-          <div style={{ marginBottom: "5px" }}>학년 : {curriculum}</div>
-          <div style={{ marginBottom: "5px" }}>과목 : {subject}</div>
-          <div>출판사 : {publisher}</div>
+          <div style={{ marginBottom: "5px", fontWeight: "700" }}>
+            책 제목 : {title}
+          </div>
+          <div style={{ marginBottom: "5px", fontWeight: "700" }}>
+            학년 : {curriculum}
+          </div>
+          <div style={{ marginBottom: "5px", fontWeight: "700" }}>
+            과목 : {subject}
+          </div>
+          <div style={{ fontWeight: "700" }}>출판사 : {publisher}</div>
         </div>
       </div>
-    </Link>
+    </div>
   );
 };
 

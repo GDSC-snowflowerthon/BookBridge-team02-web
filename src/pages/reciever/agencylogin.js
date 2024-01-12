@@ -11,17 +11,17 @@ const AgencyLogin = () => {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSignIn = async () => {
-    try {
-      const response = await axios.post("/login", {
-        login_id: id,
-        password: password,
-      });
-      navigate("/reciever/booklist");
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  // const handleSignIn = async () => {
+  //   try {
+  //     const response = await axios.post("/login", {
+  //       login_id: id,
+  //       password: password,
+  //     });
+  //     navigate("/reciever/booklist");
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   return (
     <div className="login-container">
@@ -45,9 +45,10 @@ const AgencyLogin = () => {
           placeholder="Password"
           className="input-field"
         />
-        <button onClick={handleSignIn} className="sign-in-button">
-          Sign in
-        </button>
+        {/* <button onClick={handleSignIn} className="sign-in-button"> */}
+        <Link to="/reciever/booklist">
+          <button className="sign-in-button">Sign in</button>
+        </Link>
         <Link to="/reciever/agencysignup">
           <button className="sign-up-button">Sign up</button>
         </Link>
