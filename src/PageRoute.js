@@ -23,7 +23,6 @@ import Usersingup from "./pages/main/usersignup.js";
 import SearchBookList from "./pages/reciever/searchbooklist.js";
 import BookInfo from "./pages/reciever/bookinfo.js";
 import Process2 from "./pages/donate/process2.js";
-import Process from "./pages/donate/process/Process.jsx";
 
 const PageRoute = () => {
   return (
@@ -35,7 +34,6 @@ const PageRoute = () => {
       <Route path="/signup" element={<Usersingup />}></Route>
       <Route path="/donate/gui" element={<Dongui />}></Route>
       {/* <Route path="/donate/nickname" element={<Nickname />}></Route> */}
-      <Route path="/donate/process" element={<Process />}></Route>
       <Route path="/donate/process1" element={<Process1 />}></Route>
       <Route path="/donate/process2" element={<Process2 />}></Route>
       <Route path="/donate/process3" element={<Process3 />}></Route>
