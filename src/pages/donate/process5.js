@@ -3,16 +3,21 @@ import styled from '@emotion/styled';
 import PostBtngo from '../../components/postbtngo';
 import Header from '../../components/Layout/Header';
 
-const checkBoxList = ['매우!!깨끗함', '깨끗함', '보통', '필기 있음', '필기량 많음', '연필/샤프', '볼펜/형광펜/색연필', '겉표지 깨끗함', '이름(서명) 없음', '페이지 변색 없음', '페이지 훼손 없음'];
+const checkBoxList = ['밑줄 (연필/샤프)', '밑줄 (볼펜/형광펜)', '필기 (연필/샤프)', '필기 (볼펜/형광펜)', '겉표지 깨끗함', '이름(서명) 없음', '페이지 변색 없음', '페이지 훼손 없음'];
 
 const CheckboxContainer = styled.div`
-margin: 160px auto 20px; 
+margin: 70px auto 20px; 
 text-align: center; 
+margin-bottom: 55px; /* Adjusted margin */
+bottom: 45%;
+
 `;
 
 const CheckboxItem = styled.div`
-margin-bottom: 30px; 
+margin-bottom: 20px; 
 text-align: auto; 
+bottom: 85%;
+
 `;
 
 const CheckboxLabel = styled.label`
@@ -20,6 +25,8 @@ display: block;
 font-size: 18px; /* Example font size */
 color: #333; /* Example color */
 margin-bottom: 10px; /* Example margin-bottom */
+bottom: 85%;
+
 `;
 
 const StyledParagraph0 = styled.p`
@@ -31,7 +38,7 @@ color: black;
 z-index: 1;
 left: 50%;
 transform: translateX(-50%);
-bottom: 77%;
+bottom: 85%;
 text-align: center;
 `;
 const StyledParagraph1 = styled.p`
@@ -43,9 +50,22 @@ color: black;
 z-index: 1;
 left: 50%;
 transform: translateX(-50%);
+bottom: 67%;
+text-align: center;
+`;
+const StyledParagraph2 = styled.p`
+font-weight: 900;
+font-size: 25px;
+position: fixed;
+white-space: nowrap;
+color: black;
+z-index: 1;
+left: 50%;
+transform: translateX(-50%);
 bottom: 47%;
 text-align: center;
 `;
+
 const Hello = () => {
 const [checkedItems, setCheckedItems] = useState({});
 
@@ -61,7 +81,7 @@ return (
     <Header />
     <CheckboxContainer>
         <StyledParagraph0>
-            필기한 흔적이 있나요?      
+            어느정도 필기하셨나요?     
         </StyledParagraph0>
         <div>
         {checkBoxList.slice(0, 4).map((item) => (
@@ -78,13 +98,35 @@ return (
         ))}
         </div>
         <StyledParagraph1>
-            보존 상태는 어떤가요?        
+            무엇으로 필기하셨나요?        
         </StyledParagraph1>
         <br/>
         <br/>
-
+        <br/>
+        <br/>
         <div>
-        {checkBoxList.slice(4).map((item) => (
+        {checkBoxList.slice(4,6).map((item) => (
+            <CheckboxItem key={item}>
+            <CheckboxLabel>
+                <input
+                type="checkbox"
+                checked={checkedItems[item] || false}
+                onChange={() => handleCheckboxChange(item)}
+                />
+                {item}
+            </CheckboxLabel>
+            </CheckboxItem>
+        ))}
+        </div>
+        <StyledParagraph2>
+            무엇으로 필기하셨나요?        
+        </StyledParagraph2>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div>
+        {checkBoxList.slice(6).map((item) => (
             <CheckboxItem key={item}>
             <CheckboxLabel>
                 <input

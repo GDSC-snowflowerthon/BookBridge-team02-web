@@ -4,7 +4,6 @@ import Dongui from "./pages/donate/donategui.js";
 import Mydonation from "./pages/donate/mydonation.js";
 import Mypage from "./pages/donate/mypage.js";
 import Nickname from "./pages/donate/nickname.js";
-import Userlogin from "./pages/donate/userlogin.js";
 import Process1 from "./pages/donate/process1.js";
 import Process2 from "./pages/donate/process2.js";
 import Process3 from "./pages/donate/process3.js";
@@ -20,7 +19,8 @@ import Finish from "./pages/reciever/finish.js";
 import Choose from "./pages/main/choose.js";
 import Gui from "./pages/main/gui.js";
 import Check from "./pages/main/check.js";
-import Login from "./pages/main/login.js";
+import Login from "./pages/main/userlogin.js";
+import Usersingup from "./pages/main/usersignup.js";
 
 const PageRoute = () => {
   const {} = useParams();
@@ -30,8 +30,8 @@ const PageRoute = () => {
       <Route path="/choose" element={<Choose />}></Route>
       <Route path="/check" element={<Check />}></Route>
       <Route path="/login" element={<Login />}></Route>
+      <Route path="/signup" element={<Usersingup />}></Route>
       <Route path="/donate/gui" element={<Dongui />}></Route>
-      <Route path="/donate/userlogin" element={<Userlogin />}></Route>
       <Route path="/donate/nickname" element={<Nickname />}></Route>
       <Route path="/donate/process1" element={<Process1 />}></Route>
       <Route path="/donate/process2" element={<Process2 />}></Route>
