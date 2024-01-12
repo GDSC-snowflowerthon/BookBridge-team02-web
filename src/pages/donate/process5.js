@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import PostBtngo from '../../components/postbtngo';
 import Header from '../../components/Layout/Header';
 
-const checkBoxList = ['밑줄!! (연필/샤프)', '밑줄 (볼펜/형광펜)', '필기 (연필/샤프)', '필기 (볼펜/형광펜)', '겉표지 깨끗함', '이름(서명) 없음', '페이지 변색 없음', '페이지 훼손 없음'];
+const checkBoxList = ['매우!!깨끗함', '깨끗함', '보통', '필기 있음', '필기량 많음', '연필/샤프', '볼펜/형광펜/색연필', '겉표지 깨끗함', '이름(서명) 없음', '페이지 변색 없음', '페이지 훼손 없음'];
 
 const CheckboxContainer = styled.div`
 margin: 160px auto 20px; 
