@@ -37,7 +37,7 @@ bottom: 0;
 z-index: 1;
 left: 10%;
 transform: translateX(-50%);
-bottom: 64%;
+bottom: 63%;
 text-align: center;
 `;
 const StyledParagraph5 = styled.p`
@@ -49,7 +49,7 @@ bottom: 0;
 z-index: 1;
 left: 10%;
 transform: translateX(-50%);
-bottom: 57%;
+bottom: 55%;
 text-align: center;
 `;
 const StyledParagraph6 = styled.p`
@@ -61,7 +61,7 @@ bottom: 0;
 z-index: 1;
 left: 10%;
 transform: translateX(-50%);
-bottom: 50%;
+bottom: 47%;
 text-align: center;
 `;
 const StyledParagraph7 = styled.p`
@@ -73,7 +73,7 @@ bottom: 0;
 z-index: 1;
 left: 10%;
 transform: translateX(-50%);
-bottom: 43%;
+bottom: 39%;
 text-align: center;
 `;
 const StyledParagraph8 = styled.p`
@@ -85,7 +85,7 @@ bottom: 0;
 z-index: 1;
 left: 10%;
 transform: translateX(-50%);
-bottom: 36%;
+bottom: 31%;
 text-align: center;
 `;
 
@@ -98,7 +98,7 @@ bottom: 0;
 z-index: 1;
 left: 10%;
 transform: translateX(-50%);
-bottom: 29%;
+bottom: 23%;
 text-align: center;
 `;
 const EditableButton = styled.button`
