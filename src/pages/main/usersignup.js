@@ -4,7 +4,6 @@ import Header from "../../components/Layout/Header";
 import InputField from "../../components/InputField";
 import backgroundImage from "../../assets/background/background.png";
 import { useNavigate } from "react-router-dom";
-
 import "../../styles/agencysignup.css";
 
 const AgencySignUp = () => {
