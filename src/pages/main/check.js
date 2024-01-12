@@ -252,7 +252,7 @@ return (
             <StyledParagraph6>
             기부할 참고서는 훼손의 정도가 심하지 않아야 합니다.
             <br />
-            ex : 찢어짐, 파손됨
+            ex : 찢어짐, 파손됨 !
             </StyledParagraph6>
         </Button>
         </StyledParagraph8>

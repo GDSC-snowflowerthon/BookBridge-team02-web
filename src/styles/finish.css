@@ -1,0 +1,52 @@
+.finish-container {
+  background-image: url("../assets/background.png");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.header-finish {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-family: "Noto Sans KR";
+  font-weight: 900;
+  word-wrap: break-word;
+  margin-top: 100px;
+}
+
+.finish-subHeader {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-family: "Noto Sans KR";
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+.toListBtn {
+  color: black;
+  font-size: 16px;
+  font-family: "Noto Sans KR";
+  font-weight: 700;
+  width: 200px;
+  height: 50px;
+  border-radius: 5%;
+  border: none;
+  word-wrap: break-word;
+}
+
+.giftboxImg {
+  width: 400px;
+  height: auto;
+}
