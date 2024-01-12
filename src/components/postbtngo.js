@@ -19,7 +19,7 @@ const StyledLink = styled(Link)`
     width: 90%;
     right: 0;
     padding: 0 ${common.padding};
-    bottom: 15%;
+    bottom: 5%;
     text-decoration: none; /* 텍스트에 밑줄 제거 */
 	z-index:2;
 `;
