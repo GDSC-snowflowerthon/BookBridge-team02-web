@@ -16,6 +16,7 @@ import AgencySignUp from "./pages/reciever/agencysignup.js";
 import BookList from "./pages/reciever/booklist.js";
 import BookInfo from "./pages/reciever/bookinfo.js";
 import Finish from "./pages/reciever/finish.js";
+import SearchBooks from "./pages/reciever/searchbooks.js";
 import Choose from "./pages/main/choose.js";
 import Gui from "./pages/main/gui.js";
 import Check from "./pages/main/check.js";
@@ -44,6 +45,7 @@ const PageRoute = () => {
       <Route path="/reciever/agencylogin" element={<AgencyLogin />}></Route>
       <Route path="/reciever/agencysignup" element={<AgencySignUp />}></Route>
       <Route path="/reciever/booklist" element={<BookList />}></Route>
+      <Route path="/reciever/searchbooks" element={<SearchBooks />}></Route>
       <Route path="/reciever/bookinfo" element={<BookInfo />}></Route>
       <Route path="/reciever/finish" element={<Finish />}></Route>
     </Routes>

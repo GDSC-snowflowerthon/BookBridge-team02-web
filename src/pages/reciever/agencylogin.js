@@ -14,8 +14,8 @@ const AgencyLogin = () => {
   const handleSignIn = async () => {
     try {
       const response = await axios.post("/login", {
-        id,
-        password,
+        login_id: id,
+        password: password,
       });
       navigate("/reciever/booklist");
     } catch (error) {

@@ -19,7 +19,7 @@ const AgencySignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!email || !id || !password || !checkPassword || !name) {
+    if (!email || !id || !password || !checkPassword || !name || !regNum) {
       alert("모든 필드를 채워주세요.");
       return;
     }
@@ -31,7 +31,7 @@ const AgencySignUp = () => {
 
     const formData = {
       email: email,
-      id: id,
+      login_id: id,
       password: password,
       check_password: checkPassword,
       name: name,
