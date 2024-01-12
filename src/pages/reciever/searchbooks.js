@@ -17,8 +17,8 @@ const SearchBooks = () => {
       const response = await axios.get(
         `/book?title=${title}&publisher=${publisher}`
       );
-      console.log(response.data);
-      navigate("/reciever/agencylogin");
+      const books = response.data;
+      navigate("/reciever/searchbooklist", { state: { books } });
     } catch (error) {
       console.error("불러올 수 없음 :", error);
     }

@@ -22,6 +22,7 @@ import Gui from "./pages/main/gui.js";
 import Check from "./pages/main/check.js";
 import Login from "./pages/main/userlogin.js";
 import Usersingup from "./pages/main/usersignup.js";
+import SearchBookList from "./pages/reciever/searchbooklist.js";
 
 const PageRoute = () => {
   return (
@@ -48,6 +49,10 @@ const PageRoute = () => {
       <Route path="/reciever/searchbooks" element={<SearchBooks />}></Route>
       <Route path="/reciever/bookinfo" element={<BookInfo />}></Route>
       <Route path="/reciever/finish" element={<Finish />}></Route>
+      <Route
+        path="/reciever/searchbooklist"
+        element={<SearchBookList />}
+      ></Route>
     </Routes>
   );
 };
