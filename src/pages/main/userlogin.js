@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../../styles/agencylogin.css";
+import Header from '../../components/Layout/Header'
 
 const AgencyLogin = () => {
 const navigate = useNavigate();
@@ -24,6 +25,8 @@ const handleSignIn = async () => {
 
 return (
     <div className="login-container">
+    <Header/>
+
     <div className="header-login">
         <h1 className="title">BookBridge</h1>
         <p className="subtitle">나의 시작이 될 수 있게</p>
@@ -49,7 +52,7 @@ return (
         Sign in
         </button>
         </Link>
-        <Link to="/reciever/agencysignup">
+        <Link to="/signup">
         <button className="sign-up-button">Sign up</button>
         </Link>
     </div>
