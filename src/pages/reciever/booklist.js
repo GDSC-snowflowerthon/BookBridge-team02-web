@@ -3,17 +3,14 @@ import BookStatus from "../../components/BookStatus";
 import axios from "axios";
 import Header from "../../components/Layout/Header";
 import "../../styles/booklist.css";
+import { Link } from "react-router-dom";
+import SearchImg from "../../assets/icon/Search.svg";
 
 const BookList = () => {
   const [books, setBooks] = useState([]);
   const [curriculum, setCurriculum] = useState("모든 교육 과정");
   const [subject, setSubject] = useState("모든 과목");
   const fetchBooks = () => {
-    const params = {
-      subject: subject,
-      curriculum: curriculum,
-    };
-
     axios
       .get(`/book?curriculum=${curriculum}&subject=${subject}`) //주소 넣기
       .then((response) => setBooks(response.data))
@@ -35,7 +32,13 @@ const BookList = () => {
   return (
     <div className="booklist-container">
       <Header></Header>
-      <div className="header-list">목록</div>
+      <div className="header-list">
+        <div></div>
+        <span>목록</span>
+        <Link to="/reciever/searchbooks">
+          <img src={SearchImg} className="search-button"></img>
+        </Link>
+      </div>
       <div className="select">
         <select
           className="select-curriculum"

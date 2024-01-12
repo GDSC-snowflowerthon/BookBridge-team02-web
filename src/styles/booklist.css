@@ -27,3 +27,15 @@
 .booklist {
   padding-top: 20px;
 }
+.search-button {
+  padding: 5px 10px;
+}
+
+.header-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}

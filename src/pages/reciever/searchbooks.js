@@ -26,17 +26,33 @@ const SearchBooks = () => {
   return (
     <div>
       <Header></Header>
+      <div
+        style={{
+          fontSize: "40px",
+          fontWeight: "bold",
+          marginLeft: "120px",
+          marginTop: "90px",
+          marginBottom: "100px",
+        }}
+      >
+        검색하기
+      </div>
       <form style={{ color: "black" }} onSubmit={handleSubmit}>
         <InputField2
           type="text"
           value={publisher}
           onChange={(e) => setPublisher(e.target.value)}
+          placeholder="출판사를 입력해주세요"
         ></InputField2>
         <InputField2
           type="text"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
+          placeholder="책의 제목을 입력해주세요"
         ></InputField2>
+        <br></br>
+        <br></br>
+        <br></br>
         <button className="signup-submit" type="submit">
           검색하기
         </button>

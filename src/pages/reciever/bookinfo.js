@@ -5,31 +5,27 @@ import queryString from "query-string";
 import { Link } from "react-router-dom";
 import Header from "../../components/Layout/Header";
 import "../../styles/bookinfo.css";
-/*
-{
-		
-		"title" : String,
-		"subject" : String,
-		"curriculum" : String,
-		"publisher" : String,
-		"image" : Multipartfile,
-		"preseration_status" : String,
-		"created_at" : datetime,
-	}
-*/
+
 const BookInfo = () => {
   const { search } = useLocation();
   const { book_id } = queryString.parse(search);
-  const fetchData = async () => {
-    try {
-      const response = await axios.get(`/book/${book_id}`);
-      const book = response.data;
-    } catch (error) {
-      console.error("데이터 로딩 중 오류 발생", error);
-    }
-  };
+  const [book, setBook] = useState(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(`/book/${book_id}`);
+        setBook(response.data);
+      } catch (error) {
+        console.error("데이터 로딩 중 오류 발생", error);
+      }
+    };
 
-  fetchData();
+    fetchData();
+  }, [book_id]);
+
+  if (!book) {
+    return <div></div>; // 또는 다른 로딩 표시
+  }
 
   return (
     <div className="bookinfo-container">
