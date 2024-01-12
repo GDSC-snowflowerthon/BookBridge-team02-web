@@ -41,7 +41,7 @@ const AgencySignUp = () => {
     try {
       const response = await axios.post("/signup", formData);
       console.log(response.data);
-      navigate("/reciever/booklist");
+      navigate("/reciever/agencylogin");
     } catch (error) {
       console.error("회원가입 오류:", error);
     }

@@ -23,7 +23,6 @@ import Check from "./pages/main/check.js";
 import Login from "./pages/main/login.js";
 
 const PageRoute = () => {
-  const { id } = useParams();
   return (
     <Routes>
       <Route path="/" element={<Gui />}></Route>
