@@ -68,12 +68,18 @@ height: 60px;
 `;
 
 
-const Hello = () => {
-
+const Process3 = ({setStep, info, setInfo}) => {
+    console.log(info);
+    const onNextStep = () => {
+        setStep(prev=>prev+1);
+    }
     const [selectedButton, setSelectedButton] = useState(null);
-
+    // onChange={(e) => setInfo({ ...info, category: e.target.value })}
     const handleButtonClick = (buttonName) => {
         setSelectedButton(buttonName);
+        setInfo({ ...info, category: buttonName }); // Update the category in the info state
+
+    
     };
 return (
     <>
@@ -99,9 +105,9 @@ return (
     </EditableButton>
     </StyledParagraph5>
 
-    <PostBtngo value="다음으로" type="button" to="/donate/process4" />
+    <PostBtngo value="다음으로" type="button" onClick={onNextStep} />
     </>
 );
 };
 
-export default Hello;
+export default Process3;

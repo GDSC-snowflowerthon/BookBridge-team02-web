@@ -17,22 +17,41 @@ import "../../styles/bookinfo.css";
 		"created_at" : datetime,
 	}
 */
-const BookInfo = () => {
+
+function BookInfo() {
   const { search } = useLocation();
   const { book_id } = queryString.parse(search);
+  // 초기화 여부 파악 
+  const [isInit, setIsInit] = useState(false);
+  const [book,setBook] = useState();
+
+  // 데이터 페치 함수 
   const fetchData = async () => {
     try {
       const response = await axios.get(`/book/${book_id}`);
       const book = response.data;
+      setBook(book);
+      // 초기화 완료 
+      setIsInit(true);
     } catch (error) {
       console.error("데이터 로딩 중 오류 발생", error);
     }
   };
 
-  fetchData();
+  useEffect(() => {
+    fetchData();
+    console.log("data")
+  }, [])
+  
 
   return (
-    <div className="bookinfo-container">
+    <>
+    {
+      isInit ? 
+      <>로딩중...</>
+      :
+      <>
+      <div className="bookinfo-container">
       <Header></Header>
       <div className="header-info">정보 세부보기</div>
       <img className="bookImg" alt="bookImg" src={book.outsideImageUrl} />
@@ -73,7 +92,9 @@ const BookInfo = () => {
         </Link>
       </div>
     </div>
-  );
-};
-
-export default BookInfo;
+      </>
+    }
+    </>
+  )
+}
+export default BookInfo
